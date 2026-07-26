@@ -206,6 +206,9 @@ tempCodeRunnerFile.py
 # Zeon CLI local synchronization metadata
 .zeon/
 
+# macOS Finder metadata
+.DS_Store
+
 # Ruff stuff:
 .ruff_cache/
 
