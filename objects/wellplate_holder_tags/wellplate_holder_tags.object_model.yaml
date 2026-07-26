@@ -12,13 +12,20 @@ anchors:
     parent_link: world
     description: Object placement frame (to be refined)
     link_T_anchor:
-      xyz: [-0.152867, 0.111146, 1.60956e-06]
-      wxyz: [0.706895, 0.00158633, -0.00158539, 0.707315]
+      xyz: [0.024049, 0.110799, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
   top_center:
     parent_link: body
     description: Wellplate loading position (top-center seat). Derived from the seated
       plate's bottom_center in hack_world_19; wellplate_drop aligns a plate's bottom_center
       anchor to this.
+    link_T_anchor:
+      xyz: [-0.0619471, 0.0435156, 0.075498]
+      wxyz: [0.706895, 0.00158633, -0.00158539, 0.707315]
+  round_holder_seat:
+    parent_link: body
+    description: World convention (+Z up). Dedicated receiving seat for round_holder_hackteam10;
+      align the round holder's bottom_center anchor to this frame.
     link_T_anchor:
       xyz: [-0.0619471, 0.0435156, 0.075498]
       wxyz: [0.706895, 0.00158633, -0.00158539, 0.707315]
@@ -31,9 +38,9 @@ anchors:
       wxyz: [-0.000301734, 0.00224341, -0.00224208, 0.999995]
   home:
     parent_link: body
-    description: Wellplate home (bottom-center). The bottom_center anchor of
-      wellplate_96_flatbottom transformed into this holder's body frame from
-      hack_world_22 (resolved through both objects' `object`-anchor placement frames).
+    description: Wellplate home (bottom-center). The bottom_center anchor of wellplate_96_flatbottom
+      transformed into this holder's body frame from hack_world_22 (resolved through
+      both objects' `object`-anchor placement frames).
     link_T_anchor:
       xyz: [-0.06527, 0.042275, 0.078056]
       wxyz: [0.709793, -0.000555, -0.006383, -0.704381]
@@ -133,3 +140,15 @@ anchors:
     link_T_anchor:
       xyz: [0.0146443, 0.10115, 0.0199023]
       wxyz: [0.647268, -0.281574, 0.65733, 0.263964]
+  vial_top:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.058851, 0.058574, 0.10062]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  lid_top:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.058851, 0.062574, 0.11562]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
